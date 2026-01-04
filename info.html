@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>درباره ما - EAWAL</title>
+    <style>
+        /* فونت‌ها و متغیرها (مشابه صفحات قبل) */
+        @import url('https://fonts.googleapis.com/css2?family=Lalezar&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+        
+        :root {
+            --color-dark-bg: #000000; 
+            --color-text-light: #e0e0e0;
+            --color-accent-gold: #d1a86a; 
+            --color-border: rgba(209, 168, 106, 0.15);
+            --font-serif: 'Playfair Display', serif;
+            --font-display: 'Lalezar', cursive;
+        }
+
+        body {
+            font-family: var(--font-serif);
+            background-color: var(--color-dark-bg);
+            color: var(--color-text-light);
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+            direction: rtl;
+        }
+
+        /* هدر */
+        header {
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            box-sizing: border-box;
+            z-index: 1000;
+            background-color: rgba(5, 5, 5, 0.95);
+            border-bottom: 1px solid var(--color-border);
+        }
+        .logo {
+            font-family: var(--font-display);
+            font-size: 2.2em;
+            color: var(--color-accent-gold);
+            letter-spacing: 4px;
+        }
+        nav a {
+            color: var(--color-text-light);
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 1.15em;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: var(--color-accent-gold);
+        }
+
+        /* بخش اصلی درباره ما */
+        .info-main {
+            padding: 150px 5% 50px 5%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: 3.5em;
+            color: white;
+            text-align: center;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px rgba(209, 168, 106, 0.6);
+        }
+        .section-desc {
+            text-align: center;
+            font-size: 1.3em;
+            margin-bottom: 60px;
+            color: #aaa;
+        }
+
+        /* بخش محتوای اصلی (چند ستونی) */
+        .content-columns {
+            display: flex;
+            gap: 50px;
+        }
+        .text-block, .philosophy-block {
+            flex: 1;
+            padding: 20px;
+            border-left: 1px solid var(--color-border);
+        }
+        .text-block:last-child {
+            border-left: none;
+        }
+
+        .text-block h2 {
+            font-family: var(--font-display);
+            color: var(--color-accent-gold);
+            font-size: 2em;
+            margin-top: 0;
+        }
+        .philosophy-block {
+            background-color: #050505;
+            border-left: none;
+        }
+        .philosophy-block h2 {
+            font-family: var(--font-display);
+            color: white;
+            font-size: 1.8em;
+            text-align: center;
+        }
+        .philosophy-quote {
+            font-style: italic;
+            font-size: 1.2em;
+            border-right: 4px solid var(--color-accent-gold);
+            padding-right: 15px;
+            margin-top: 20px;
+        }
+
+        /* واکنش‌گرایی ساده */
+        @media (max-width: 850px) {
+            .content-columns {
+                flex-direction: column;
+            }
+            .text-block, .philosophy-block {
+                border-left: none;
+                border-bottom: 1px solid var(--color-border);
+                padding-bottom: 30px;
+            }
+            .text-block:last-child {
+                border-bottom: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">EAWAL</div>
+        <nav>
+            <a href="home.html">خانه</a>
+            <a href="artwork.html">آثار</a>
+            <a href="info.html">درباره</a>
+            <a href="contact.html">تماس</a>
+        </nav>
+    </header>
+
+    <main class="info-main">
+        <h1 class="section-title">ریشه‌ها: سرگذشت EAWAL</h1>
+        <p class="section-desc">سفری به تاریک‌ترین گوشه‌های خلاقیت و فلسفه هنری ما.</p>
+
+        <div class="content-columns">
+            
+            <div class="text-block">
+                <h2>پیدایش در سکوت</h2>
+                <p>
+                    EAWAL نه یک استودیو، بلکه یک نقطه تلاقی است؛ محلی که در آن مفاهیم انتزاعی شکل جامد به خود می‌گیرند. هسته اصلی این پروژه در سال‌های ابتدایی دهه ۲۰۲۰ شکل گرفت، زمانی که هنرمند اصلی (که هویت او ترجیح داده می‌شود پنهان بماند) دریافت که ارتباط عمیق‌تر با درون، تنها از طریق فرم‌های هنری غیرمعمول میسر است.
+                </p>
+                <p>
+                    هدف اولیه، فراتر رفتن از محدودیت‌های رنگ و بوم بود. تمرکز بر روی بافت، سایه و ماهیت متغیر فرم‌ها قرار گرفت. این رویکرد منجر به توسعه تکنیک‌های ترکیبی شد که امروزه به عنوان امضای ما شناخته می‌شوند.
+                </p>
+            </div>
+
+            <div class="text-block philosophy-block">
+                <h2>فلسفه هنری</h2>
+                <p>
+                    ما معتقدیم که هر اثر هنری، بازتابی از ناخودآگاه جمعی است که در قالب یک جسم مادی یا دیجیتالی فشرده شده است.
+                </p>
+                <blockquote class="philosophy-quote">
+                    "هنر، تنها جایی است که می‌توانیم بدون ترس از قضاوت، با سایه‌های وجودمان گفتگو کنیم."
+                </blockquote>
+                <p>
+                    مجموعه آثار ما بر اساس سه اصل اصلی سازماندهی شده است: **تضاد (Contrast)**، **تراکم (Density)** و **تأمل (Contemplation)**. هر اثر تلاش می‌کند تا این اصول را در خود متبلور سازد.
+                </p>
+            </div>
+			<div class="text-block">
+				<h2>انعکاس حقیقت پنهان</h2>
+				<p>
+					هنر، نه یک شیء است، نه یک تزیین، بلکه یک ضرورت وجودی و یک مکاشفه است.
+
+هنر در بنیاد خود، اعتراضی آرام اما ابدی است علیه فراموشی و فنا. این زبانی است که در حاشیه‌ی منطق و در مرزهای سکوت متولد می‌شود؛ جایی که کلمات از بیانِ عمقِ تجربه عاجزند. هر اثر هنری، تلاشی است برای منجمد کردنِ لحظه‌ای از حقیقتِ سیالِ هستی، یا به تعبیری دیگر، برپا کردنِ یک بنای مقاوم در برابر هجوم بی‌پایان زمان.
+				</p>
+			</div>
+			<div class="text-block philosophy-block">
+				<h2>افرینش و شهامت در هنر</h2>
+				<p>
+					آفرینش هنری، نوعی شهامت است؛ شهامت ایستادن در برابر هرج و مرجِ جهان و اعطای معنا. هنر می‌گوید: «این جهان شاید بی‌هدف به نظر برسد، اما من با دست‌هایم این کائوس را به نظم درآورده‌ام، یا حداقل، آن را به پرسش کشیده‌ام.» در این فرآیند، هنرمند خود را خلق می‌کند و همزمان، به ما می‌آموزد که ما نیز می‌توانیم روایتگر زندگی خود باشیم.
+
+زیرا زیبایی در هنر، صرفاً یک کیفیت ظاهری نیست، بلکه تبلورِ یک «ایده» و یک «فکر» است که در هیبت فرم به جهان عرضه شده. هنر، نوعی فلسفه‌ورزی است که به جای استدلال، از استعاره و حس استفاده
+می‌کند تا به قلب انسان نفوذ کند.
+
+در نهایت، هنر تذکر می‌دهد که ما چیزی فراتر از موجوداتی فانی و مصرف‌کننده هستیم. هنر، نبض ماندگار تمدن است که در بوم، سنگ، و صدا ضربان می‌گیرد و گواهی می‌دهد که زیستن، ورای صرفِ بودن، در گروی «دیدن» با چشمانی است که زیبایی را درک می‌کنند. هنر، آینه‌ای است که در آن، انسانیتِ خود را در کامل‌ترین و عمیق‌ترین شکل مشاهده می‌کنیم.
+				</p>
+			</div>
+
+        </div>
+    </main>
+
+</body>
+</html>

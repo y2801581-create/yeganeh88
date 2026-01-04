@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آثار - EAWAL</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lalezar&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+        
+        :root {
+            --color-dark-bg: #000000; 
+            --color-text-light: #e0e0e0;
+            --color-accent-gold: #d1a86a; 
+            --color-border: rgba(209, 168, 106, 0.15);
+            --font-serif: 'Playfair Display', serif;
+            --font-display: 'Lalezar', cursive;
+        }
+
+        body {
+            font-family: var(--font-serif);
+            background-color: var(--color-dark-bg);
+            color: var(--color-text-light);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            direction: rtl;
+        }
+        
+        /* هدر (مشابه صفحه قبل) */
+        header {
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            box-sizing: border-box;
+            z-index: 1000;
+            background-color: rgba(5, 5, 5, 0.95);
+            border-bottom: 1px solid var(--color-border);
+        }
+        .logo {
+            font-family: var(--font-display);
+            font-size: 2.2em;
+            color: var(--color-accent-gold);
+            letter-spacing: 4px;
+        }
+        nav a {
+            color: var(--color-text-light);
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 1.15em;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: var(--color-accent-gold);
+        }
+
+        /* بخش اصلی آثار */
+        .artwork-main {
+            padding: 150px 5% 50px 5%;
+        }
+        
+        .section-title {
+            font-family: var(--font-display);
+            font-size: 3.5em;
+            color: white;
+            text-align: center;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px rgba(209, 168, 106, 0.6);
+        }
+        .section-desc {
+            text-align: center;
+            font-size: 1.3em;
+            margin-bottom: 40px;
+            color: #aaa;
+        }
+
+        /* فیلترها */
+        .filter-container {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .filter-btn {
+            background: none;
+            border: 1px solid var(--color-border);
+            color: var(--color-text-light);
+            padding: 10px 20px;
+            margin: 0 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s, color 0.3s;
+            border-radius: 5px;
+        }
+        .filter-btn:hover, .filter-btn.active {
+            background-color: var(--color-accent-gold);
+            color: var(--color-dark-bg);
+            border-color: var(--color-accent-gold);
+        }
+
+        /* گالری گرید */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .artwork-card {
+            background-color: #0a0a0a;
+            border: 1px solid var(--color-border);
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .artwork-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(209, 168, 106, 0.3);
+        }
+        .artwork-image {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            display: block;
+            transition: opacity 0.3s;
+        }
+        .artwork-card:hover .artwork-image {
+            opacity: 0.8;
+        }
+        .card-info {
+            padding: 15px;
+            text-align: right;
+        }
+        .card-title {
+            font-family: var(--font-display);
+            font-size: 1.5em;
+            color: white;
+            margin: 0 0 5px 0;
+        }
+        .card-category {
+            font-size: 0.9em;
+            color: var(--color-accent-gold);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">EAWAL</div>
+        <nav>
+            <a href="home.html">خانه</a>
+            <a href="artwork.html">آثار</a>
+            <a href="info.html">درباره</a>
+            <a href="contact.html">تماس</a>
+        </nav>
+    </header>
+
+    <main class="artwork-main">
+        <h1 class="section-title">آثار خلق شده: تجلی قلمروهای درونی</h1>
+        <p class="section-desc">مجموعه‌ای از آنچه روح در سکوت خلق کرده است.</p>
+
+        <div class="filter-container">
+            <button class="filter-btn active" data-category="all">همه</button>
+            <button class="filter-btn" data-category="shadow-sculptures">مجسمه‌های سایه</button>
+            <button class="filter-btn" data-category="reverse-paintings">نقاشی‌های معکوس</button>
+            <button class="filter-btn" data-category="digital-expressionism">دیجیتال اکسپرسیونیسم</button>
+        </div>
+
+        <div class="gallery" id="artwork-gallery">
+            
+            <!-- نمونه اثر ۱ -->
+            <div class="artwork-card" data-category="shadow-sculptures">
+                <div class="card-info">
+                  <h3 class="card-title"><img src="image/IMG_9442.JPG" width="590" height="441" alt=""/>تولد از شکاف</h3>
+                    <p class="card-category">مجسمه‌های سایه</p>
+                </div>
+            </div>
+
+            <!-- نمونه اثر ۲ -->
+            <div class="artwork-card" data-category="reverse-paintings">
+                <div class="card-info">
+                    <h3 class="card-title"><img src="image/IMG_9439.JPG" width="590" height="441" alt=""/>آرامش متلاطم</h3>
+                    <p class="card-category">نقاشی‌های معکوس</p>
+                </div>
+            </div>
+
+            <!-- نمونه اثر ۳ -->
+            <div class="artwork-card" data-category="digital-expressionism">
+                <div class="card-info">
+                  <h3 class="card-title"><img src="image/IMG_9436.JPG" width="590" height="441" alt=""/>تراوش نور</h3>
+                    <p class="card-category">دیجیتال اکسپرسیونیسم</p>
+                </div>
+            </div>
+            
+            <!-- نمونه اثر ۴ -->
+            <div class="artwork-card" data-category="shadow-sculptures">
+                <div class="card-info">
+                  <h3 class="card-title"><img src="image/IMG_9434.JPG" width="590" height="441" alt=""/>معماری گمشدگان</h3>
+                    <p class="card-category">مجسمه‌های سایه</p>
+                </div>
+            </div>
+
+            <!-- نمونه اثر ۵ -->
+            <div class="artwork-card" data-category="digital-expressionism">
+              <div class="card-info">
+                <h3 class="card-title"><img src="image/IMG_9440.JPG" width="590" height="441" alt=""/>رقص ابدیت</h3>
+                    <p class="card-category">دیجیتال اکسپرسیونیسم</p>
+                </div>
+            </div>
+
+            <!-- نمونه اثر ۶ -->
+            <div class="artwork-card" data-category="reverse-paintings">
+                <div class="card-info">
+                  <h3 class="card-title"><img src="image/IMG_9441.JPG" width="590" height="441" alt=""/>مرز مه</h3>
+                    <p class="card-category">نقاشی‌های معکوس</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const cards = document.querySelectorAll('.artwork-card');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const category = this.getAttribute('data-category');
+
+                    // غیرفعال کردن همه دکمه‌ها و فعال کردن دکمه کلیک شده
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+
+                    // فیلتر کردن کارت‌ها
+                    cards.forEach(card => {
+                        const cardCategory = card.getAttribute('data-category');
+                        if (category === 'all' || cardCategory === category) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
